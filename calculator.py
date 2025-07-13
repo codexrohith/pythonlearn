@@ -81,7 +81,7 @@ while True:
                 result = ceil(num_1)
             case "signum":
                 result = signum(num_1)
-        expr = f"{operator}({num_1})"
+        expression = f"{operator}({num_1})"
     
     else:
         num_1 = float(input("Enter 1st number: "))
