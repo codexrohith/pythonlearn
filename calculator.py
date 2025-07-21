@@ -66,8 +66,11 @@ while True:
             print("No history yet.")
         else:
             print("\n Calculation History:")
-            for index, (expression, result) in enumerate(history, 1):
+            index = 1
+            for entry in history:
+                expression, result = entry
                 print(f"{index}. {expression} = {result}")
+                index += 1
         continue
 
     elif operator in ["sqrt", "floor", "ceil", "signum"]:
@@ -81,7 +84,7 @@ while True:
                 result = ceil(num_1)
             case "signum":
                 result = signum(num_1)
-        expr = f"{operator}({num_1})"
+        expression = f"{operator}({num_1})"
     
     else:
         num_1 = float(input("Enter 1st number: "))
